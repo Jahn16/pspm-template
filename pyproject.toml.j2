@@ -1,25 +1,25 @@
 
 [project]
-name = "{{ name }}"
+name = "{{ project_name }}"
 version = "0.1.0"
 dependencies = []
 requires-python = ">=3.8"
-{%- if author %}
+{%- if author_name %}
 authors = [
-    { name = "{{ author.name }}", email = "{{ author.email }}" }
+    { name = "{{ author_name }}", email = "{{ author_email }}" }
 ]
 {%- endif %}
-description = "{{ description }}"
+description = "{{ project_description }}"
 readme = "README.md"
 classifiers = [
   "Programming Language :: Python"
 ]
 
-{% if installable -%}
+{% if is_installable -%}
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.target.wheel]
-packages = ["src/{{ safe_name }}"]
+packages = ["src/{{ package_name }}"]
 {% endif %}
