@@ -1,2 +1,3 @@
-# pspm-templates
-Copier template for PSPM projects 
+# {{ project_name }}
+
+{{ project_description }}
