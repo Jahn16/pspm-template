@@ -13,14 +13,13 @@ package_name:
 project_description:
   type: str
   help: What is your project description?
+  default: "Describe your project here"
 
 author_name:
   type: str
-  default: ""
 
 author_email:
   type: str
-  default: ""
 
 is_installable:
   type: bool
