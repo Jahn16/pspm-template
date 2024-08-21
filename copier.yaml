@@ -31,3 +31,7 @@ is_installable:
   help: Is your project installable?
   default: yes
 
+create_copier_answer:
+  type: bool
+  help: Do you want to create .copier-answers.yml file?
+  default: no
