@@ -34,7 +34,3 @@ author_email:
   default: ""
 
 
-is_installable:
-  type: bool
-  help: Is your project installable?
-  default: yes
