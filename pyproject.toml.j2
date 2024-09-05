@@ -1,4 +1,3 @@
-
 [project]
 name = "{{ project_name }}"
 version = "0.1.0"
@@ -18,16 +17,16 @@ classifiers = [
 [project.optional-dependencies]
 dev = []
 
-{% if project_type == "script" %}
+{%- if project_type == "script" %}
 [project.scripts]
 {{ project_name }} = "{{ project_name }}.cli:main"
-{% endif %}
+{%- endif %}
 
-{% if project_type != "app" -%}
+{%- if project_type != "app" -%}
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.target.wheel]
 packages = ["src/{{ package_name }}"]
-{% endif %}
+{%- endif %}
