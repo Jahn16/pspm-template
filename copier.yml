@@ -10,6 +10,14 @@ package_name:
   type: str
   default: "{{ project_name|lower|replace('-', '_')|replace(' ', '_') }}"
 
+project_type:
+  type: str
+  choices:
+    - lib
+    - app
+    - script
+  default: lib
+
 project_description:
   type: str
   help: What is your project description?
