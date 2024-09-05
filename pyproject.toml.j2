@@ -20,7 +20,7 @@ dev = []
 
 {% if project_type == "script" %}
 [project.scripts]
-{{ package}} = "{{ project_name }}.cli:main"
+{{ project_name }} = "{{ project_name }}.cli:main"
 {% endif %}
 
 {% if project_type != "app" -%}
